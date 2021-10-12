@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "985e12fa-0f1e-4861-af6c-cd0b253a6fca"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -61,12 +64,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "weatherApp:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "weatherApp:build:production"
-            }
+              "browserTarget": "weatherApp:build",
+              "proxyConfig": "src/proxy.conf.json"
           }
         },
         "extract-i18n": {
